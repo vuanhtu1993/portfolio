@@ -1,6 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import HomeLayout from "./layout/home";
 import About from "./page/about";
@@ -10,6 +8,7 @@ import Home from "./page/home";
 function App() {
   return (
     <BrowserRouter>
+    {/* From v6 we have to declare route at one place */}
       <Routes>
         <Route path="/" element={<HomeLayout/>}>
           <Route index element={<Home />} />
